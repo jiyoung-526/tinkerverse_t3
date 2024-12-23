@@ -154,6 +154,7 @@
 
     .text {
         width: 85%; /* 텍스트 너비 */
+        padding-left: 0rem;
     }
 
     .year {
