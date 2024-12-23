@@ -87,7 +87,7 @@ const translations = {
                 member_name: "준이접기",
                 member_role: "청소년 작업자",
                 member_keyword:`#공학 #항공역학 #물리학 #종이접기 #목재작업 #3D프린터 #공간 #발명 #기계
-                #파충류 #절지동물 #우주 #화학 #전자기력 #호기심 #과학 #끈기`,
+                #파충류 #절지동물 #우주 #화학 #전자기력 #호기심 #끈기`,
             },
             member9: {
                 member_name: "채은",
@@ -114,14 +114,14 @@ const translations = {
             member13: {
                 member_name: "간장",
                 member_role: "작가",
-                member_keyword: `#장소를 상상하기 #그리기 #만들기 #글쓰기 #채집과 수집 #자연스러움 #기억에 관한 이야기 #반복적인 수행
-                 #다정한 태도 #공간을 기록하는 방식 #지능과 훈련 #우리의 관계 #도시 속 조형 언어 #하늘과 바다의 빛`,
+                member_keyword: `#장소를 상상하기 #그리기 #만들기 #글쓰기 #채집과 수집 #자연스러움 #기억에 관한 이야기 #수행
+                 #다정한 태도 #공간을 기록하는 방식 #우리의 관계 #도시 속 조형 언어 #하늘과 바다의 빛`,
             },
             member14: {
                 member_name: "양파",
                 member_role: "작가",
                 member_keyword: `#세상의 발견 #관심 #관찰 #관계 #섬세함 #감성 #인문학적 사고 #공간의 상상 #대칭 #양감 
-                #질감 #복제 #반복`,
+                #질감`,
             },
             member15: {
                 member_name: "노바",
@@ -487,7 +487,7 @@ const translations = {
                 member_name: "준이접기",
                 member_role: "Youth Creator",
                 member_keyword:`#Engineering #Aerodynamics #Physics #Origami #Woodworking #3D Printing #Space #Invention #Machines #Reptiles 
-                #Arthropods #Cosmos #Chemistry #ElectromagneticForce #Curiosity #Science #Perseverance`,
+                #Arthropods #Cosmos #Chemistry #ElectromagneticForce #Curiosity #Perseverance`,
             },
             member9: {
                 member_name: "채은",
@@ -515,13 +515,13 @@ const translations = {
                 member_name: "간장",
                 member_role: "Artist",
                 member_keyword: `#Imagining Places #Drawing #Making #Writing #Gathering&Collecting #Naturalness #Stories of Memory 
-                #Repetitive Practice #Warm #Ways to Record Space #Intelligence&Training #Our Relationships #Urban Visual Language #Lights of Sky&Sea`,
+                #Practice #Warm #Ways to Record Space #Our Relationships #Urban Visual Language #Lights of Sky&Sea`,
             },
             member14: {
                 member_name: "양파",
                 member_role: "Artist",
                 member_keyword: `#Discovering the World #Interest #Observation #Relationships #Delicacy #Emotion #Humanistic Thinking 
-                #Imagining Spaces #Symmetry #Volume #Texture #Replication #Repetition`,
+                #Imagining Spaces #Symmetry #Volume #Texture`,
             },
             member15: {
                 member_name: "노바",
