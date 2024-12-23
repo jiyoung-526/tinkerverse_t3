@@ -830,7 +830,6 @@ document.getElementById("language-switch").addEventListener("click", () => {
     setLanguage(newLang);
 });
 
-// 초기 로드 시 언어 적용
 setLanguage(currentLang);
 
 // 더보기 버튼 인터렉션
