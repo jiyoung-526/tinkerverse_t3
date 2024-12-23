@@ -175,7 +175,9 @@
     }
     
     .text {
-        width: 80%;
+        padding-left: 0rem;
+        margin: 0 auto;
+        width: 83%;
         text-align: start;
         overflow-y: auto;
     }
