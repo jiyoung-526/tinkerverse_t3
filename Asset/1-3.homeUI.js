@@ -43,7 +43,6 @@ musicButton.addEventListener('click', () => {
 });
 
 //Zoom - - - - - - - -
-// 줌 가능한 이미지들 선택 (illust와 bookshelf 둘 다 포함)
 const zoomableImages = document.querySelectorAll('#zoomable-illust, #zoomable-bookshelf');
 const zoomButton = document.querySelector('.zoom-button');
 const zoomTrack = document.querySelector('.zoom-track');
@@ -57,59 +56,73 @@ let offsetY = 0; // 이미지 이동 오프셋 Y
 let startX = 0; // 마우스 시작 위치 X
 let startY = 0; // 마우스 시작 위치 Y
 
-// 줌 버튼 드래그 시작
-zoomButton.addEventListener('mousedown', () => {
-    isDraggingZoom = true;
-});
+// 이벤트 리스너 추가 (줌 버튼 및 트랙)
+zoomButton.addEventListener('mousedown', (e) => startDragZoom(e));
+zoomButton.addEventListener('touchstart', (e) => startDragZoom(e, true));
+document.addEventListener('mouseup', endDragZoom);
+document.addEventListener('touchend', endDragZoom);
+document.addEventListener('mousemove', (e) => dragZoom(e));
+document.addEventListener('touchmove', (e) => dragZoom(e, true));
+zoomTrack.addEventListener('click', (e) => handleZoomTrackClick(e));
 
-// 줌 버튼 드래그 종료
-document.addEventListener('mouseup', () => {
-    isDraggingZoom = false;
-    isDraggingImage = false;
-});
+// 줌 버튼 드래그 시작 이벤트
+function startDragZoom(e, isTouch = false) {
+    isDraggingZoom = true;
+    if (isTouch) e.preventDefault(); // 줌 버튼 드래그에만 기본 동작 방지
+}
 
 // 줌 버튼 드래그 중 이벤트
-document.addEventListener('mousemove', (e) => {
+function dragZoom(e, isTouch = false) {
     if (isDraggingZoom) {
-        updateZoomButtonAndScale(e.clientX);
+        const clientX = isTouch ? e.touches[0].clientX : e.clientX;
+        updateZoomButtonAndScale(clientX);
+
+        if (isTouch) e.preventDefault(); // 줌 버튼 드래그에만 기본 동작 방지
     }
-});
+}
+
+// 줌 버튼 드래그 종료 이벤트
+function endDragZoom() {
+    isDraggingZoom = false;
+    isDraggingImage = false;
+}
 
 // 줌 트랙 클릭 이벤트
-zoomTrack.addEventListener('click', (e) => {
-    updateZoomButtonAndScale(e.clientX);
-});
+function handleZoomTrackClick(e) {
+    const clientX = e.clientX;
+    updateZoomButtonAndScale(clientX);
+}
 
 // 이미지 드래그 시작 이벤트 (zoomableImages 전체 적용)
 zoomableImages.forEach((image) => {
-    image.addEventListener('mousedown', (e) => {
-        isDraggingImage = true;
-        startX = e.clientX;
-        startY = e.clientY;
-    });
+    image.addEventListener('mousedown', (e) => startDragImage(e));
+    image.addEventListener('touchstart', (e) => startDragImage(e, true));
 });
+
+// 이미지 드래그 시작
+function startDragImage(e, isTouch = false) {
+    isDraggingImage = true;
+    startX = isTouch ? e.touches[0].clientX : e.clientX;
+    startY = isTouch ? e.touches[0].clientY : e.clientY;
+
+    if (isTouch) e.stopPropagation(); // 터치 드래그 중 스크롤 허용
+}
 
 // 이미지 드래그 중 이벤트
 document.addEventListener('mousemove', (e) => {
+    if (isDraggingImage) handleImageDrag(e.clientX, e.clientY);
+});
+
+document.addEventListener('touchmove', (e) => {
     if (isDraggingImage) {
-        const deltaX = e.clientX - startX;
-        const deltaY = e.clientY - startY;
-        startX = e.clientX;
-        startY = e.clientY;
-
-        // 오프셋 업데이트
-        offsetX = Math.max(
-            Math.min(offsetX + deltaX, container.offsetWidth / 2),
-            -container.offsetWidth / 2
-        );
-        offsetY = Math.max(
-            Math.min(offsetY + deltaY, container.offsetHeight / 2),
-            -container.offsetHeight / 2
-        );
-
-        updateImageTransform();
+        handleImageDrag(e.touches[0].clientX, e.touches[0].clientY);
+        e.stopPropagation(); // 터치 이벤트의 스크롤 충돌 방지
     }
 });
+
+// 이미지 드래그 종료 이벤트
+document.addEventListener('mouseup', () => (isDraggingImage = false));
+document.addEventListener('touchend', () => (isDraggingImage = false));
 
 // 이미지 이동 및 줌 업데이트 함수
 function updateImageTransform() {
@@ -150,6 +163,26 @@ function updateZoomButtonAndScale(clientX) {
     if (zoomScale < previousZoomScale) {
         resetImagePosition();
     }
+
+    updateImageTransform();
+}
+
+// 이미지 드래그 처리 함수
+function handleImageDrag(clientX, clientY) {
+    const deltaX = clientX - startX;
+    const deltaY = clientY - startY;
+    startX = clientX;
+    startY = clientY;
+
+    // 오프셋 업데이트
+    offsetX = Math.max(
+        Math.min(offsetX + deltaX, container.offsetWidth / 2),
+        -container.offsetWidth / 2
+    );
+    offsetY = Math.max(
+        Math.min(offsetY + deltaY, container.offsetHeight / 2),
+        -container.offsetHeight / 2
+    );
 
     updateImageTransform();
 }
