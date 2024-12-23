@@ -117,7 +117,7 @@
         width: auto;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -43%); /* 중앙 정렬 유지 */
+        transform: translate(-50%, -50%); /* 중앙 정렬 유지 */
     }
 
     .points {
