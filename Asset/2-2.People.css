@@ -164,7 +164,6 @@
         flex-direction: column; /* 세로 정렬 */
         margin-top: 0.5rem;
         padding-top: 3.2rem; /* 닫기 버튼 아래 여백 */
-        overflow-y: auto;
     }
 
     .member_img {
