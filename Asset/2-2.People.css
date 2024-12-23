@@ -184,7 +184,7 @@
     
     .text .name {
         font-weight: bold;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
     }
 
     .text .keyword{
