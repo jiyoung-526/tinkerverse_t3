@@ -449,9 +449,9 @@ const translations = {
             member1: {
                 member_name: "2H",
                 member_role: "Youth Creator",
-                member_keyword: `나는 자동차를 좋아한다. 그 중에서도 현대 전기차를 좋아한다. 
-                내가 초등학교 4학년 때부터 자동차를 좋아했는데, 시대가 변하면서 핸들을 잡지 않아도
-                자동차가 스스로 가는게 신기해서 자동차에 관심이 많다.`,
+                member_keyword: `I like cars, especially Hyundai electric vehicles. 
+                When I was in the 4th grade, I found it fascinating that cars can drive themselves without a human driver, 
+                as times have changed. This has deepened my interest in cars.`,
             },
             member2: {
                 member_name: "닭강정",
