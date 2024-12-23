@@ -109,7 +109,7 @@ const translations = {
             member12: {
                 member_name: "YG",
                 member_role: "청소년 작업자",
-                member_keyword: "#게임",
+                member_keyword: "#게임 #어려운 것 #간편하면서 휴대성이 좋은 것 #파손이 잘 안되는 것 #하얀색 #검정색 #밤 #컴퓨터 #대칭 #T",
             },
             member13: {
                 member_name: "간장",
@@ -509,7 +509,7 @@ const translations = {
             member12: {
                 member_name: "YG",
                 member_role: "Youth Creator",
-                member_keyword: "#Game",
+                member_keyword: "#Game #Challengable #Simple & Portable #Durable #White #Black #Night #Computer #Symmetry #T",
             },
             member13: {
                 member_name: "간장",
