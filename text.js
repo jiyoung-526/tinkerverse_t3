@@ -1,6 +1,6 @@
 const translations = {
     ko: {
-        //(1K)Nav
+        //(1K)Nav bar
         about: "전시 소개",
         people: "함께한 사람들",
         futureLab: "퓨처랩 살펴보기",
@@ -125,17 +125,17 @@ const translations = {
             },
             member15: {
                 member_name: "노바",
-                member_role: "모티(청년 퍼실리에이터)",
+                member_role: "모티 (청년 퍼실리에이터)",
                 member_keyword: "#Do it for fun :)",
             },
             member16: {
                 member_name: "스톤",
-                member_role: "모티(청년 퍼실리에이터)",
+                member_role: "모티 (청년 퍼실리에이터)",
                 member_keyword: "#데굴데굴데굴데굴",
             },
             member17: {
                 member_name: "J",
-                member_role: "모티(청년 퍼실리에이터)",
+                member_role: "모티 (청년 퍼실리에이터)",
                 member_keyword: "#모두를 위한 다정한 상상력 #예술공학 #좋은 감각 큐레이션",
             },
         },
@@ -525,17 +525,17 @@ const translations = {
             },
             member15: {
                 member_name: "노바",
-                member_role: "Moti(facilitator)",
+                member_role: "Moti (facilitator)",
                 member_keyword: "#Do it for fun :)",
             },
             member16: {
                 member_name: "스톤",
-                member_role: "Moti(facilitator)",
+                member_role: "Moti (facilitator)",
                 member_keyword: "#(..) ( l: ) ( .-. ) ( :l ) (..)",
             },
             member17: {
                 member_name: "J",
-                member_role: "Moti(facilitator)",
+                member_role: "Moti (facilitator)",
                 member_keyword: "#Warm Imagination for our communities #ArtEngineering #Curating Good Sensibilities",
             },
         },
