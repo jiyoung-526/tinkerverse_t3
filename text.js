@@ -733,7 +733,7 @@ const translations = {
                 title: "Spin Table",
                 price: "₩10,900",
                 size: "Diameter of 42cm",
-                material: "grass",
+                material: "Wood",
                 detail: `The product for convenience in movement trajector.`
             },
             prod5: {
