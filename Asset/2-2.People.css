@@ -127,8 +127,8 @@
     }
     
     .point {
-        width: 1rem;
-        height: 1rem;
+        width: 1.1rem;
+        height: 1.1rem;
         transform: translate(-50%, -52%);
         pointer-events: all; /* 클릭 가능 */
     }
