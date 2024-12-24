@@ -19,34 +19,30 @@ async function loadPopup() {
     document.body.insertAdjacentHTML('beforeend', popupHTML);
 }
 
-function openPopup(index) {
-    const data = popupData[index];
-    if (!data) {
-        console.error("Invalid index for popup data:", index);
-        return;
-    }
+// (to process <br> tags)
+const fieldsUsingInnerHTML = ['art_material'];
 
+function openPopup(pointClass) {
+    const data = popupData[pointClass];
+    if (!data) return;
+    
     const { img, dataKey } = data;
 
-    // 이미지 업데이트
-    document.querySelector(".artwork_img").src = img;
+    document.querySelector('.artwork_img').src = img;
 
-    // 텍스트 업데이트
-    document.querySelectorAll(".text [data-key]").forEach((element) => {
-        const key = element.getAttribute("data-key");
-        const content = translations[currentLang]?.art_popups[dataKey]?.[key];
+    document.querySelectorAll('.text [data-key]').forEach(element => {
+        const key = element.getAttribute('data-key');
+        const content = translations?.[currentLang]?.['art_popups']?.[dataKey]?.[key] || ''; 
 
-        // link_play의 경우에는 innerHTML로 처리
-        if (key === "link_play") {
-            element.innerHTML = content || ""; // HTML 삽입
+        if (fieldsUsingInnerHTML.includes(key)) {
+            element.innerHTML = content; // for what have <br>
         } else {
-            element.textContent = content || ""; // 일반 텍스트 삽입
+            element.textContent = content;
         }
     });
 
-    // 팝업 보이기
-    document.querySelector(".popup-overlay").style.display = "block";
-    document.querySelector(".popup-window").style.display = "block";
+    document.querySelector('.popup-overlay').style.display = 'block';
+    document.querySelector('.popup-window').style.display = 'block';
 }
 
 function closePopup() {
