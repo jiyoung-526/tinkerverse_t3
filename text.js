@@ -262,8 +262,8 @@ const translations = {
                 art_size: "25(W)x20(L)x20(H)(cm)",
                 art_material: "나무, 천, 솜, 클레이, 페인트",
                 art_year: "2024",
-                art_detail: `다양한 소재로 이루어진 미니어쳐 공간은, 관객이 자신이 좋아하는 공간에 대해
-                상상을 하게 한다.`,
+                art_detail: `다양한 소재로 이루어진 미니어쳐 공간은, 관객이 자신이 좋아하는 공간을
+                상상하게 한다.`,
             },
             art10: {
                 art_name: "포쿠",
