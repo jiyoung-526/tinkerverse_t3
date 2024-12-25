@@ -103,7 +103,7 @@ const translations = {
             member11: {
                 member_name: "호라이",
                 member_role: "청소년 작업자",
-                member_keyword: `#투명한 #감미로운 #음악 #우드 #피아노 #리메이트 #활발한 #강력한 #풀 #소라 #푸른 
+                member_keyword: `#투명한 #감미로운 #음악 #우드 #피아노 #리메이크 #활발한 #강력한 #풀 #소라 #푸른 
                 #낡은 #오래된 #거미`,
             },
             member12: {
