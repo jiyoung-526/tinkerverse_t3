@@ -1,16 +1,16 @@
 const popupData = {
-    1: { img: "Asset/Images/ProdAll_Img/1.png", dataKey: 'prod1' },
-    2: { img: "Asset/Images/ProdAll_Img/2.png", dataKey: 'prod2' },
-    3: { img: "Asset/Images/ProdAll_Img/3.png", dataKey: 'prod3' },
-    4: { img: "Asset/Images/ProdAll_Img/4.png", dataKey: 'prod4' },
-    5: { img: "Asset/Images/ProdAll_Img/5.png", dataKey: 'prod5' },
-    6: { img: "Asset/Images/ProdAll_Img/6.png", dataKey: 'prod6' },
-    7: { img: "Asset/Images/ProdAll_Img/7.png", dataKey: 'prod7' },
-    8: { img: "Asset/Images/ProdAll_Img/8.png", dataKey: 'prod8' },
-    9: { img: "Asset/Images/ProdAll_Img/9.png", dataKey: 'prod9' },
-    10: { img: "Asset/Images/ProdAll_Img/10.png", dataKey: 'prod10' },
-    11: { img: "Asset/Images/ProdAll_Img/11.png", dataKey: 'prod11' },
-    12: { img: "Asset/Images/ProdAll_Img/12.png", dataKey: 'prod12' },
+    1: { img: "Asset/Images/Prodpopup_Img/1.png", dataKey: 'prod1' },
+    2: { img: "Asset/Images/Prodpopup_Img/2.png", dataKey: 'prod2' },
+    3: { img: "Asset/Images/Prodpopup_Img/3.png", dataKey: 'prod3' },
+    4: { img: "Asset/Images/Prodpopup_Img/4.png", dataKey: 'prod4' },
+    5: { img: "Asset/Images/Prodpopup_Img/5.png", dataKey: 'prod5' },
+    6: { img: "Asset/Images/Prodpopup_Img/6.png", dataKey: 'prod6' },
+    7: { img: "Asset/Images/Prodpopup_Img/7.png", dataKey: 'prod7' },
+    8: { img: "Asset/Images/Prodpopup_Img/8.png", dataKey: 'prod8' },
+    9: { img: "Asset/Images/Prodpopup_Img/9.png", dataKey: 'prod9' },
+    10: { img: "Asset/Images/Prodpopup_Img/10.png", dataKey: 'prod10' },
+    11: { img: "Asset/Images/Prodpopup_Img/11.png", dataKey: 'prod11' },
+    12: { img: "Asset/Images/Prodpopup_Img/12.png", dataKey: 'prod12' },
 };
 
 async function loadPopup() {
