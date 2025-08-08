@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About_FutureLab</title>
+
+    <link rel="stylesheet" href="../Design.css?v=1.0">
+    <link rel="stylesheet" href="Asset/2-3.Futurelab.css">
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+
+                const script = document.createElement('script');
+                script.src = '../text.js';
+                document.body.appendChild(script);
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+    <div class="SpeechBubble">
+        <div class="textbox" data-key = "bubbleText_space">
+            궁금한 퓨처랩 공간을 클릭해 주세요!
+        </div>
+        <img class="tail" src="Asset/Images/tail.svg" alt="Tail">
+    </div>
+
+    <div class="contaienr">
+        <img class="illust" src="Asset/Images/illust.png" alt="Illustration">
+        
+        <div class="points">
+            <div class="point p1" onclick="openPopup('p1')"></div>
+            <div class="point p2" onclick="openPopup('p2')"></div>
+            <div class="point p3" onclick="openPopup('p3')"></div>
+            <div class="point p4" onclick="openPopup('p4')"></div>
+            <div class="point p5" onclick="openPopup('p5')"></div>
+            <div class="point p6" onclick="openPopup('p6')"></div>
+        </div>
+    </div>
+
+    <div class="popup-overlay"></div>
+
+    <div class="popup-window">
+        <div class="popup-content">
+            <!--위쪽 공간 이미지-->
+            <img src ="" alt="Space image" class="space_img">
+
+            <!--아래쪽 공간 텍스트-->
+            <div class="text">
+                <div class="name" data-key="space_name"></div>
+                <div class="detail" data-key="space_detail"></div>
+            </div>
+        </div>
+        
+        <button class="close-button" onclick="closePopup()" data-key="space_popup_close_btn">
+            다른 공간 고르기
+        </button>
+
+        <img src = 'Asset/Images/nav_x_icon.svg' alt="Close" class="close-icon" onclick="closePopup()">
+    </div>
+    
+    <script src="Asset/2-3.Futurelab.js"></script>
+
+</body>
+</html>
