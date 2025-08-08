@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024_#002_FutureLab_Home</title>
+    <link rel="stylesheet" href="../Design.css?v=1.0">
+    <link rel="stylesheet" href="Asset/1-3.homeUI.css?v=1.0">
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+
+                const script = document.createElement('script');
+                script.src = '../text.js';
+                document.body.appendChild(script);
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+    
+    <div class="SpeechBubble">
+        <div class="textbox" data-key = "bubbleText_home">
+            책장을 클릭해주세요!
+        </div>
+        <img class="tail" src="Asset/Images/tail.svg" alt="Tail">
+    </div>
+
+    <div class="homeUI-container">
+        <div class="zoom-container">
+            <div class="zoom-background">
+                <span class="zoom-minus">-</span>
+                <div class="zoom-track">
+                    <div class="zoom-button"></div>
+                </div>
+                <span class="zoom-plus">+</span>
+            </div>
+        </div>
+        <div class="music-container">
+            <div class="music-button">||</div>
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="Asset/Images/illust.svg" alt="Illustration" id="zoomable-illust">
+        <a href="3-1.NoteAll.html">
+            <img src="Asset/Images/bookshelf.png" alt="Bookshelf" id="zoomable-bookshelf">
+        </a>
+    </div> 
+
+    <a href="../index.html" class="selectNum" data-key="seemorenum">
+        | 더보기 |
+    </a>
+    
+    <script src="Asset/1-3.homeUI.js"></script>
+</body>
+</html>
