@@ -1,0 +1,233 @@
+.button-container {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.9rem; /* 버튼 간격 */
+    z-index: 1;
+}
+
+.nav-button {
+    background-color: #E6E6E6;
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px; /* 텍스트 세로 중앙 정렬 */
+    border-radius: 30px; /* 버튼 곡률 */
+    text-align: center;
+    display: inline-block;
+    white-space: nowrap; /*버튼텍스트 줄바꿈 X*/
+}
+
+.b1:hover,
+.b3:hover {
+    font-weight: 800;
+}
+
+.b2 {
+    background-color: #FF5000;
+    color: white;
+    font-weight: 800;
+}
+
+/*--popup--*/
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.illust {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    width: 57rem; /* 고정 너비 */
+    height: auto; /* 비율 유지 */
+}
+
+.illust-mobile {
+    display: none;
+}
+.illust-desktop {
+    display: block;
+}
+
+.points {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* illust 크기를 기준으로 조정 */
+    height: 100%; /* illust 크기를 기준으로 조정 */
+    pointer-events: none; /* 클릭 이벤트 방지 */
+}
+
+.point {
+    width: 9rem;
+    height: 10rem;
+    border-radius: 15px;
+    position: absolute;
+    background-color: #ff000000;
+    transform: translate(-50%, -10.7%);
+    pointer-events: all; /* 클릭 가능 */
+}
+
+.point.p2 {transform: translate(-50%, -10.7%) rotate(-6.5deg);}
+.point.p4 {transform: translate(-50%, -10.7%) rotate(20deg);}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 10;
+    display: none;
+}
+
+.popup-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -57%);
+    width: 22.5rem;
+    height: 33rem;
+    background-color: #ffffff00;
+    z-index: 15;
+    display: none;
+}
+
+.popup-content {
+    position: relative;
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.note_img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.note-buttons {
+    position: absolute; 
+    top: 84%; 
+    left: 50%; 
+    transform: translate(-50%, 0%); 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    z-index: 2;
+}
+
+.artnote_open_btn {
+    background-color: #FF5000;
+    border: none;
+    border-radius: 30px;
+    height: 40px;
+    padding: 0 50px;
+    color: white;
+    font-size: 1rem;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.close-button {
+    position: absolute;
+    bottom: -4.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #E6E6E6;
+    border: none;
+    border-radius: 30px;
+    height: 40px;
+    padding: 0 90px;
+    font-size: 1rem;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+@media (max-width: 950px) {
+    .illust-desktop {
+        display: none;
+    }
+    
+    .illust-mobile {
+        display: block;
+        height: 22rem; 
+        width: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -43%); /* 중앙 정렬 유지 */
+    }
+
+    .points {
+        position: absolute;
+        top: 2%;
+        left: 0%;
+        width: 0%; /* 모바일 이미지 크기에 맞춤 */
+        height: 27rem; /* 모바일 이미지 크기에 맞춤 */
+    }
+    
+    .point {
+        width: 4.7rem; /* 모바일 포인트 버튼 크기 (임시값) */
+        height: 4.3rem;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    .point.p2 {transform: translate(-50%, -50%) rotate(0deg);}
+    .point.p4 {transform: translate(-50%, -50%) rotate(0deg);}
+    .point.p5 {transform: translate(-50%, -50%) rotate(0deg);}
+    .point.p8 {transform: translate(-50%, -50%) rotate(0deg);}
+    .point.p12 {transform: translate(-50%, -50%) rotate(0deg);}
+}
+
+@media (max-width: 780px) {
+    .button-container {
+        bottom: 22px;
+        display: flex;
+        gap: 0.5rem; /* 버튼 간격 */
+        z-index: 1;
+    }
+    
+    .nav-button {
+        font-size: 0.9rem;
+        padding: 0 17px;
+        height: 35px;
+        line-height: 35px; /* 텍스트 세로 중앙 정렬 */
+        border-radius: 30px; /* 버튼 곡률 */
+    }
+
+    .popup-window {
+        transform: translate(-50%, -59%);
+        width: 18rem;
+        height: 27rem;
+    }
+
+    .artnote_open_btn {
+        margin-bottom: 0.8rem;
+    }
+    
+    .artnote_open_btn, 
+    .prodnote_open_btn {
+        border-radius: 30px;
+        height: 40px;
+        padding: 0 52px;
+        font-size: 0.95rem;
+    }
+}

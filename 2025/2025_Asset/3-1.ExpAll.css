@@ -1,0 +1,141 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'NanumSquareRound';
+    box-sizing: border-box;
+}
+
+.content {
+    margin: 0 22%;
+    padding-top: 8.3rem;
+    padding-bottom: 5.5rem;
+    font-size: 1rem;
+    color: #000;
+}
+
+.contbox{
+    margin-bottom: 4rem;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.text {
+    line-height: 1.4;
+    margin-bottom: 1.3rem;
+}
+
+.photo img {
+    width: 100%;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.seeExp_btn {
+    display: inline-block;
+    background-color:#E6E6E6;
+    color: black;
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+
+    border-radius: 30px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 80px;
+}
+
+/*지구경험-일지-선물 버튼*/
+.bottom-box {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 0;
+}
+
+.nav-button {    
+    background-color: #E6E6E6;
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px; /* 텍스트 세로 중앙 정렬 */
+    border-radius: 30px; /* 버튼 곡률 */
+    text-align: center;
+    display: inline-block;
+    transition: all 0.3s ease;
+    white-space: nowrap; /*버튼텍스트 줄바꿈 X*/
+}
+
+.button-container {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.9rem; /* 버튼 간격 */
+    z-index: 1;
+}
+
+.b2:hover,
+.b3:hover {font-weight: 800;}
+.b1 {
+    background-color: #FF5000;
+    color: white;
+    font-weight: 800;
+}
+
+.scroll-to-top {
+    width: 2.6rem;
+    height: 2.6rem;
+    background-color: #E6E6E6;
+    color: #777777;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 50px;
+    right: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+@media (max-width: 950px) {
+    .content {
+        margin: 0 8%;
+        margin-bottom: 3rem;
+    }
+
+    .bottom-box {height: 77px;}
+
+    .button-container {
+        bottom: 22px;
+        display: flex;
+        gap: 0.5rem; /* 버튼 간격 */
+        z-index: 1;
+    }
+    .nav-button {
+        font-size: 0.9rem;
+        padding: 0 17px;
+        height: 35px;
+        line-height: 35px; /* 텍스트 세로 중앙 정렬 */
+        border-radius: 30px; /* 버튼 곡률 */
+    }
+
+    .scroll-to-top{
+        right: 1rem;
+        bottom: 70px;
+    }
+}

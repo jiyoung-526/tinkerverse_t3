@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup_artworks</title>
+
+    <link rel="stylesheet" href="popup_art.css">
+</head>
+
+<body>
+    <div class="popup-overlay"></div>
+    
+    <div class="popup-window">
+        <div class="top-bar">
+            <img src="2025_Asset/Images/nav_x_icon.svg" alt="Close" class="close-icon" onclick="closePopup()">
+        </div>
+
+        <div class="popup-content">
+            <!--작품 이미지-->
+            <img src ="" alt="artwork image" class="artwork_img">
+
+            <!--작품 텍스트-->
+            <div class="text">
+                <div class="name" data-key="art_name"></div>
+                <div class="title" data-key="art_title"></div>
+                <div class="detail" data-key="art_detail"></div>
+            </div>
+
+            <button class="toletter_btn" data-key="toletter_btn">편지 읽기</button>
+        </div>
+
+        <button class="close-button" onclick="closePopup()" data-key="art_popup_close_btn"></button>
+    </div>
+    
+</body>
+</html>

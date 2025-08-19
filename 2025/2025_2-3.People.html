@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="Design.css?v=1.0">
+    <link rel="stylesheet" href="2025_Asset/2-3.People.css">
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <script>
+        fetch('2025_navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+
+                const script = document.createElement('script');
+                script.src = 'text.js';
+                document.body.appendChild(script);
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+    <div class="SpeechBubble">
+        <div class="textbox" data-key = "bubbleText_people">
+            궁금한 사람을 클릭해 주세요!
+        </div>
+        <img class="tail" src="2025_Asset/Images/tail.svg" alt="Tail">
+    </div>
+    
+    <div class="contaienr">
+        <img class="illust" src="2025_Asset/Images/illust_people.png" alt="Illustration">
+        
+        <div class="points">
+            <div class="point p1" onclick="openPopup('p1')"></div>
+            <div class="point p2" onclick="openPopup('p2')"></div>
+            <div class="point p3" onclick="openPopup('p3')"></div>
+            <div class="point p4" onclick="openPopup('p4')"></div>
+            <div class="point p5" onclick="openPopup('p5')"></div>
+            <div class="point p6" onclick="openPopup('p6')"></div>
+            <div class="point p7" onclick="openPopup('p7')"></div> <!--간장-->
+            <div class="point p8" onclick="openPopup('p8')"></div> <!--나루-->
+            <div class="point p9" onclick="openPopup('p9')"></div> <!--데미안-->
+        </div>
+    </div>
+    <audio id="audio-player" style="display:none;"></audio>
+
+    <div class="popup-overlay"></div>
+    <div class="popup-window">
+        <div class="popup-content">
+            <!--멤버 이미지-->
+            <img src ="" alt="member image" class="member_img">
+
+            <!--멤버 텍스트-->
+            <div class="text">
+                <div class="role" data-key="member_role"></div>
+                <div class="name" data-key="member_name"></div>
+                <div class="keyword" data-key="member_keyword"></div>
+            </div>
+        </div>
+        
+        <button class="close-button" onclick="closePopup()" data-key="member_popup_close_btn">
+            다른 사람 고르기
+        </button>
+
+        <img src = '2025_Asset/Images/nav_x_icon.svg' alt="Close" class="close-icon" onclick="closePopup()">
+    </div>
+
+    <script src="2025_Asset/2-3.People.js"></script>
+
+    <a href="2025_2-3-2.People_Photos.html" class="seephotos" data-key="see_photos">
+        | 함께한 순간 사진 보기 |
+    </a>
+
+</body>
+</html>

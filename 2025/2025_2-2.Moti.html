@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About_FutureLab</title>
+
+    <link rel="stylesheet" href="Design.css?v=1.0">
+    <link rel="stylesheet" href="2025_Asset/2-2.Moti.css">
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <script>
+        fetch('2025_navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+
+                const script = document.createElement('script');
+                script.src = 'text.js';
+                document.body.appendChild(script);
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+    <div class="content">
+        <div class="title" data-key = "moti_story_title">Moti 스토리</div>
+        <div class="text" data-key = "moti_story_text1">Moti 설명(임시텍스트)</div>
+        <div class="text" data-key = "moti_story_text2">미니워크숍 설명(임시텍스트)</div>
+
+        <div class="sub_content">
+            <div class="name1" data-key = "moti_name1">나루: 나에 의한 세계 만들기</div>
+            <div class="photo"><img src="2025_Asset/Images/Moti_Img/1.jpg" alt="P1"></div>
+            <div class="subtext t1" data-key = "moti_story_text3">나루 워크숍 설명</div>
+            <div class="subtext t2" data-key = "moti_story_text4">나루 워크숍 설명</div>
+
+            <div class="name2" data-key = "moti_name2">데미안: 무의식대로 표현하기</div>
+            <div class="photo"><img src="2025_Asset/Images/Moti_Img/2.jpg" alt="P2"></div>
+            <div class="subtext t3" data-key = "moti_story_text5">데미안 워크숍 설명</div>
+        </div>
+    </div>
+
+    <button class="scroll-to-top" aria-label="Scroll to top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        ↑</button>
+
+    <script>
+        const scrollToTopButton = document.querySelector('.scroll-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                scrollToTopButton.style.display = 'flex';
+            } else {
+                scrollToTopButton.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
