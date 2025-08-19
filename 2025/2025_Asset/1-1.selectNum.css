@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'NanumSquareRound', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.logo {
+    width: 17rem;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.textbox {
+    background: white;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1rem;
+    color: black;
+    display: inline-block;
+    margin-bottom: 5rem;
+}
+
+.circle-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.8rem; /* 버튼 간격 */
+}
+
+.circle-button {
+    width: 5rem;
+    height: 5rem;
+    background-color: #E6E6E6;
+    border: none;
+    border-radius: 50%;
+    font-size: 0.95rem;
+    color: black;
+    text-align: center;
+    line-height: 1.3rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.circle-button:hover {
+    background-color: #FF5000;
+    color: white;
+}
+
+@media (max-width: 950px) {
+    .circle-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem; /* 버튼 간격 */
+    }
+    
+    .circle-button {
+        width: 4.45rem;
+        height: 4.45rem;
+        font-size: 0.85rem;
+        line-height: 1.2rem;
+    }
+}

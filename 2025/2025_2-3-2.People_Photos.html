@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Exhibition</title>
+
+    <link rel="stylesheet" href="Design.css?v=1.0">
+    <link rel="stylesheet" href="2025_Asset/2-3-2.People_Photos.css">
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <script> /*Nav Bar*/
+        fetch('2025_navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+
+                const script = document.createElement('script');
+                script.src = 'text.js';
+                document.body.appendChild(script);
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+    
+    <div class="content">
+        <div class="title" data-key = "photo_title">함께한 순간들</div>
+        <div class="num">2025.4.4~7.4</div>
+        <div class="text t1" data-key = "peoplephoto_subtext1"></div>
+        <div class="text t2" data-key = "peoplephoto_subtext2"></div>
+        <div class="photos"></div>
+    </div>
+
+    <script>
+    const photoCount = 68; // 사진 N장
+    const photoContainer = document.querySelector('.photos');
+
+    for (let i = 1; i <= photoCount; i++) {
+        const img = document.createElement('img');
+        img.src = `2025_Asset/Images/People_Photos/${i}.png`; // 경로
+        img.alt = `Photo ${i}`;
+        photoContainer.appendChild(img);
+    }
+    </script>
+
+    <div class="bottom-box"></div>
+    <a href="2025_2-3.People.html" class="toPeople_button" data-key="toPeople_button">되돌아가기</a>
+
+    <button class="scroll-to-top" aria-label="Scroll to top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        ↑</button>
+
+    <script>
+        const scrollToTopButton = document.querySelector('.scroll-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                scrollToTopButton.style.display = 'flex';
+            } else {
+                scrollToTopButton.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

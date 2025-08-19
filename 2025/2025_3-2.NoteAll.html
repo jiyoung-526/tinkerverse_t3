@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="Design.css?v=1.0">
+    <link rel="stylesheet" href="2025_Asset/3-2.NoteAll.css?v=1.0">
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <script> /*Nav Bar*/
+        fetch('2025_navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+
+                const script = document.createElement('script');
+                script.src = 'text.js';
+                document.body.appendChild(script);
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+    <div class="SpeechBubble">
+        <div class="textbox" data-key = "bubbleText_note">
+            외계인을 클릭해 작업일지를 살펴보세요!
+        </div>
+        <img class="tail" src="2025_Asset/Images/tail.svg" alt="Tail">
+    </div>
+
+    <div class="contaienr">
+        <img class="illust illust-desktop" src="2025_Asset/Images/NoteAll_Img.png" alt="Illustration">
+        <img class="illust illust-mobile" src="2025_Asset/Images/NoteAll_Img(m).png" alt="Illustration">
+        
+        <div class="points">
+            <div class="point p1" onclick="playSoundAndOpenPopup('p1')"></div>
+            <div class="point p2" onclick="playSoundAndOpenPopup('p2')"></div>
+            <div class="point p3" onclick="playSoundAndOpenPopup('p3')"></div>
+            <div class="point p4" onclick="playSoundAndOpenPopup('p4')"></div>
+            <div class="point p5" onclick="playSoundAndOpenPopup('p5')"></div>
+            <div class="point p6" onclick="playSoundAndOpenPopup('p6')"></div>
+        </div>
+    </div>
+
+    <div class="popup-overlay"></div>
+
+    <div class="popup-window">
+        <div class="popup-content">
+            <!--노트 앞면 사진-->
+            <img src ="" alt="note_f_img" class="note_img">
+
+            <!--작품/상품 노트 열기 버튼-->
+            <div class="note-buttons">
+                <button class="artnote_open_btn" data-key="artnote_open_btn">작품 노트 펼치기</button>
+            </div>
+        </div>
+        
+        <button class="close-button" onclick="closePopup()" data-key="note_popup_close_btn">
+            다른 노트 고르기
+        </button>
+    </div>
+    
+    <script src="2025_Asset/3-2.NoteAll.js"></script>
+
+    <div class="button-container">
+        <a href="2025_3-1.ExpAll.html" class="nav-button b1" data-key="exp">지구 경험</a>
+        <a href="2025_3-2.NoteAll.html" class="nav-button b2" data-key="note">작업 일지</a>
+        <a href="2025_3-3.ArtAll.html" class="nav-button b3" data-key="product">외계인의 선물함</a>
+    </div>
+</body>
+</html>

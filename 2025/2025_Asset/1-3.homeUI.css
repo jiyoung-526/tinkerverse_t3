@@ -1,0 +1,166 @@
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* y값 위치 */
+}
+
+#zoomable-illust {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 52rem;
+    height: auto;
+}
+
+#zoomable-bookshelf {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -75%);
+    width: 7.7rem; /* 화면 높이의 ?% 크기 */
+    height: auto;
+}
+
+.homeUI-container {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 28rem;
+    height: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.zoom-container {
+    width: 25.2rem;
+    height: 1.75rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.zoom-background {
+    background-color: #E8E8E8;
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem; /* 내부 여백 */
+}
+
+.zoom-minus, .zoom-plus {
+    font-size: 1rem;
+    color: #777777;
+}
+
+.zoom-track {
+    position: absolute;
+    top: 50%;
+    left: 2.2rem;
+    right: 2.2rem;
+    transform: translateY(-50%); /*위아래 정렬*/
+    height: 7px;
+    background-color: #BEBEBE;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.zoom-track:hover {
+    cursor: pointer;
+}
+
+.zoom-button {
+    left: 0.25rem;
+    position: relative;
+    background-color: black;
+    width: 10px;
+    height: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#zoomable-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);;
+    width: auto;
+    height: auto;
+    min-width: 70%;
+    min-height: 70%;
+    max-width: 77%;
+    max-height: 77%;
+    cursor: grab;
+    transition: transform 0.1s ease-in-out;
+}
+
+#zoomable-image:active {
+    cursor: grabbing; /* 드래그 중 표시 */
+}
+
+.selectNum {
+    text-decoration: none;
+    position: fixed;
+    bottom: 55px;
+    right: 15%;
+    font-size: 0.9rem;
+    color: #777777;
+    z-index: 2;
+}
+
+@media (max-width: 850px) {
+    #zoomable-illust {
+        width: 27rem;
+        max-width: 100%;
+    }
+    
+    #zoomable-bookshelf {
+        width: 5.5rem;
+    }
+
+    .selectNum{
+        bottom: 68px;
+        right: 5%;
+    }
+
+    .homeUI-container {
+        position: fixed;
+        bottom: 22px;
+        left: 55%; /* 슬라이더 x값 조정하기 */
+        transform: translate(-50%);
+        width: 20rem;
+        height: 1.75rem;
+        z-index: 1;
+    }
+    
+    .zoom-container {
+        width: 17.5rem;
+        height: 1.75rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    
+    .zoom-background {
+        background-color: #E8E8E8;
+        border-radius: 30px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem; /* 내부 여백 */
+    }
+    
+    .zoom-minus, .zoom-plus {
+        font-size: 1rem;
+        color: #777777;
+    }
+    
+}

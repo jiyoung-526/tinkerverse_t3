@@ -1,0 +1,97 @@
+[3-1.ExpAll.html]
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EarthExp_All</title>
+    <link rel="stylesheet" href="Design.css?v=1.0">
+    <link rel="stylesheet" href="2025_Asset/3-1.ExpAll.css?v=1.0">
+    <link rel="stylesheet" href="2025_Asset/3-1.ExpWork_popup.css?v=1.0">
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <script> /*Nav Bar*/
+        fetch('2025_navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+
+                const script = document.createElement('script');
+                script.src = 'text.js';
+                document.body.appendChild(script);
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+    <div class="content">
+        <div class="contbox box1">
+            <div class="title" data-key = "exp_title1">자연 색상</div>
+            <div class="text t1" data-key = "exp_about1"></div>
+            <div class="photo"><img src="2025_Asset/Images/3-1.Exp_Img/1.jpg" alt="exp1"></div>
+            <!--팝업창 버튼-->
+            <button class="seeExp_btn btn1" onclick="viewExpwork(1)" data-key = "seeExp_btn"></button>
+        </div>
+
+        <div class="contbox box2">
+            <div class="title" data-key = "exp_title2">자연 문양</div>
+            <div class="text t1" data-key = "exp_about2"></div>
+            <div class="photo"><img src="2025_Asset/Images/3-1.Exp_Img/2.jpg" alt="exp2"></div>
+            <!--팝업창 버튼-->
+            <button class="seeExp_btn btn2" onclick="viewExpwork(2)" data-key = "seeExp_btn"></button>
+        </div>
+
+        <div class="contbox box3">
+            <div class="title" data-key = "exp_title3">자연 감각</div>
+            <div class="text t1" data-key = "exp_about3"></div>
+            <div class="photo"><img src="2025_Asset/Images/3-1.Exp_Img/3.jpg" alt="exp3"></div>
+            <!--팝업창 버튼-->
+            <button class="seeExp_btn btn3" onclick="viewExpwork(3)" data-key = "seeExp_btn"></button>
+        </div>
+    </div>
+
+    <!-- 팝업창 구조 -->
+    <div id="popupOverlay" class="popup-overlay">
+        <div class="popup-box">
+            <!-- 모바일용 X 아이콘 -->
+            <img src="2025_Asset/Images/nav_x_icon.svg" alt="Close" class="close-icon" onclick="closePopup()">
+
+            <!-- 이미지 슬라이드 -->
+            <button class="nav-btn prev-btn" onclick="prevImg()">&lt;</button>
+            <img id="popupImg" class="popup-img" src="" alt="popup work">
+            <button class="nav-btn next-btn" onclick="nextImg()">&gt;</button>
+
+            <!-- PC용 닫기 버튼 -->
+            <button class="close-button" onclick="closePopup()" data-key="art_popup_close_btn"></button>
+        </div>
+    </div>
+
+
+    <!-- 팝업.js -->
+    <script src="2025_Asset/3-1.ExpWork_popup.js?v=1.0"></script>
+
+    <!--하단 버튼 3개-->
+    <div class="bottom-box"></div>
+
+    <div class="button-container">
+        <a href="2025_3-1.ExpAll.html" class="nav-button b1" data-key="exp">지구 경험</a>
+        <a href="2025_3-2.NoteAll.html" class="nav-button b2" data-key="note">작업 일지</a>
+        <a href="2025_3-3.ArtAll.html" class="nav-button b3" data-key="product">외계인의 선물함</a>
+    </div>
+
+    <button class="scroll-to-top" aria-label="Scroll to top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        ↑</button>
+
+    <script>
+        const scrollToTopButton = document.querySelector('.scroll-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                scrollToTopButton.style.display = 'flex';
+            } else {
+                scrollToTopButton.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

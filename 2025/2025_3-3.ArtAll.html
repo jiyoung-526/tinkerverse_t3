@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artwork_All</title>
+    <link rel="stylesheet" href="Design.css?v=1.0" />
+    <link rel="stylesheet" href="2025_Asset/3-3.ArtAll.css?v=1.0" />
+    <link rel="stylesheet" href="popup_art.css?v=1.0" />
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <script>
+        /* Nav Bar */
+        fetch('2025_navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+
+                const script = document.createElement('script');
+                script.src = 'text.js';
+                document.body.appendChild(script);
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+    <div class="SpeechBubble">
+        <div class="textbox" data-key="bubbleText_art">
+            작품을 클릭해 보세요!
+        </div>
+        <img class="tail" src="2025_Asset/Images/tail.svg" alt="Tail" />
+    </div>
+
+    <div class="container">
+        <img
+            class="illust illust-desktop"
+            src="2025_Asset/Images/ArtAll_Img/art_all.png"
+            alt="artworks_all"
+        />
+        <img
+            class="illust illust-mobile"
+            src="2025_Asset/Images/ArtAll_Img/art_all(m).png"
+            alt="artworks_all"
+        />
+
+        <div class="points">
+            <div class="point p1" onclick="openPopup('p1')"></div>
+            <div class="point p2" onclick="openPopup('p2')"></div>
+            <div class="point p3" onclick="openPopup('p3')"></div>
+            <div class="point p4" onclick="openPopup('p4')"></div>
+            <div class="point p5" onclick="openPopup('p5')"></div>
+            <div class="point p6" onclick="openPopup('p6')"></div>
+        </div>
+    </div>
+
+    <script src="2025_Asset/3-3.ArtAll.js"></script>
+
+    <div class="button-container">
+        <a href="2025_3-1.ExpAll.html" class="nav-button b1" data-key="exp">지구 경험</a>
+        <a href="2025_3-2.NoteAll.html" class="nav-button b2" data-key="note">작업 일지</a>
+        <a href="2025_3-3.ArtAll.html" class="nav-button b3" data-key="product">외계인의 선물함</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Exhibition</title>
+
+    <link rel="stylesheet" href="Design.css?v=1.0">
+    <link rel="stylesheet" href="2025_Asset/2-1.About.css">
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <script> /*Nav Bar*/
+        fetch('2025_navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+
+                const script = document.createElement('script');
+                script.src = 'text.js';
+                document.body.appendChild(script);
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+    
+    <div class="content">
+        <div class="title" data-key = "about_title">외계인 환영팩: 지구 에디션</div>
+        <div class="num">2025 #003</div>
+        <div class="photo"><img src="2025_Asset/Images/alien.png" alt="alien"></div>
+        <div class="text t1" data-key = "about_exhibit_1"></div>
+        <div class="text t2" data-key = "about_exhibit_2"></div>
+        <div class="text t3" data-key = "about_exhibit_3"></div>
+        <div class="text t4" data-key = "about_exhibit_4"></div>
+        <div class="text t5" data-key = "about_exhibit_5"></div>
+        <div class="text t6" data-key = "about_exhibit_6"></div>
+
+        <div class="video-container">
+            <video controls>
+                <source src="2025_Asset/Images/IntroVideo.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="bottom-box"></div>
+        <a href="2025_3-3.ArtAll.html" class="toExhibit_button" data-key="toExhibit_button">전시 보러가기</a>
+    </div>
+
+    <button class="scroll-to-top" aria-label="Scroll to top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        ↑</button>
+
+    <script>
+        const scrollToTopButton = document.querySelector('.scroll-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                scrollToTopButton.style.display = 'flex';
+            } else {
+                scrollToTopButton.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

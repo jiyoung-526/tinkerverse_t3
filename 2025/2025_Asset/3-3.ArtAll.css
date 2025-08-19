@@ -1,0 +1,148 @@
+.button-container {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.9rem; /* 버튼 간격 */
+    z-index: 1;
+}
+
+.nav-button {
+    background-color: #E6E6E6;
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px; /* 텍스트 세로 중앙 정렬 */
+    border-radius: 30px; /* 버튼 곡률 */
+    text-align: center;
+    display: inline-block;
+    transition: all 0.3s ease;
+    white-space: nowrap; /*버튼텍스트 줄바꿈 X*/
+}
+
+.b1:hover,
+.b2:hover { font-weight: 800; }
+.b3 {
+    background-color: #FF5000;
+    color: white;
+    font-weight: 800;
+}
+
+/* !--------------! */
+.container {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.illust {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 57.3rem;
+    height: auto; /* 화면 높이의 ?% 크기 */
+    max-width: 100%;
+}
+
+.illust-mobile {
+    display: none;
+}
+.illust-desktop {
+    display: block;
+}
+
+.points {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.point {
+    border-radius: 50%;
+    position: absolute;
+    background-color: #ff020200;
+    transform: translate(-50%, -50%);
+    pointer-events: all; /* 클릭 가능 */
+}
+
+.point.p1 {width: 8rem; height: 10rem; border-radius: 3px;} /*채은*/
+.point.p2 {width: 9rem; height: 7rem; border-radius: 3px;
+        transform: translate(-50%, -50%) rotate(-25deg);} /*세현*/
+
+.point.p3 {width: 8rem; height: 8rem; border-radius: 3px;} /*유선*/
+.point.p4 {width: 7rem; height: 7rem; border-radius: 3px;} /*윤제*/
+.point.p5 {width: 8rem; height: 10rem; border-radius: 3px;
+        transform: translate(-50%, -50%) rotate(-26deg);} /*승준*/
+.point.p6 {width: 9rem; height: 7rem; border-radius: 3px;
+        transform: translate(-50%, -50%) rotate(15deg);} /*윤하*/
+
+@media (max-width: 1000px) {
+    .illust-desktop {
+        display: none;
+    }
+    
+    .illust-mobile {
+        display: block;
+        height: 22rem; 
+        width: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -54%); /* 중앙 정렬 유지 */
+    }
+
+    .points {
+        position: absolute;
+        top: 2%; left: 0%;
+        width: 0%; /* 모바일 이미지 크기에 맞춤 */
+        height: 27rem; /* 모바일 이미지 크기에 맞춤 */
+    }
+    
+    .point {
+        width: 13.5rem; /* 모바일 포인트 버튼 크기 (임시값) */
+        height: 2rem;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    .point.p1 {width: 4rem; height: 4rem;}
+    .point.p2 {width: 4rem; height: 3.5rem;}
+    .point.p3 {width: 3.5rem; height: 3.5em;}
+    .point.p4 {
+        width:3.5rem; height: 3.5rem;
+        transform: translate(-50%, -50%) rotate(-15deg);
+    }
+    .point.p5 {
+        width: 3.5rem; height: 5rem;
+        transform: translate(-50%, -50%) rotate(10deg);
+    }
+    .point.p6 {
+        width: 4rem; height: 4rem;
+        transform: translate(-50%, -50%) rotate(-10deg);
+    }
+}
+
+@media (max-width: 780px) {
+    .button-container {
+        bottom: 22px;
+        display: flex;
+        gap: 0.5rem; /* 버튼 간격 */
+        z-index: 1;
+    }
+    
+    .nav-button {
+        font-size: 0.9rem;
+        padding: 0 17px;
+        height: 35px;
+        line-height: 35px; /* 텍스트 세로 중앙 정렬 */
+        border-radius: 30px; /* 버튼 곡률 */
+    }
+}

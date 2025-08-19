@@ -1,0 +1,85 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'NanumSquareRound';
+    box-sizing: border-box;
+}
+
+.content {
+    margin: 0 22%;
+    margin-bottom: 3rem;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #000;
+    text-align: left;
+    margin-top: 8.3rem;
+    margin-bottom: 2.5rem;
+}
+
+.text {
+    font-size: 1rem;
+    color: #000;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.sub_content {
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    color: #000;
+    text-align: left;
+    margin-bottom: 5.5rem;
+}
+
+.name1, .name2 {
+    margin-bottom: 1.3rem;
+    font-weight: 800;
+}
+
+.photo img {
+    width: 100%;
+    display: block;
+    margin-bottom: 1.3rem;
+}
+
+.subtext {
+    font-size: 1rem;
+    color: #000;
+    line-height: 1.5;
+}
+
+.t2{
+    margin-bottom: 4rem;
+}
+
+.scroll-to-top {
+    font-family: 'NanumSquareRound';
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #E6E6E6;
+    color: #777777;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 50px;
+    right: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+@media (max-width: 950px) {
+    .content {
+        margin: 0 8%;
+        margin-bottom: 3rem;
+    }    
+
+    .scroll-to-top{
+        right: 1rem;
+    }
+}
