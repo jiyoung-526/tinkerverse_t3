@@ -362,7 +362,7 @@ const translations = {
                 art_name: "SaeHyun",
                 art_title: "VCT&GEN.G Classic",
                 art_detail: `This gift lets aliens feel the beauty of Earth's minerals. 
-                It is also a weapon to protect them from being kindapped by certain groups.`,
+                It is also a weapon to protect them from being kidnapped by certain groups.`,
             },
             letter2:{
                 letter_name: "SaeHyun",
