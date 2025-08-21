@@ -48,10 +48,10 @@ const translations = {
         스토리텔링의 즐거움을 느낄 수 있는 시간을 만들고자 했습니다.`,
         moti_story_text4: `워크숍은 나만의 세계관을 상상하는 것에서 시작했습니다. 그 세계를 이루는 다양한 패턴과 규칙, 특징을 활동지에 표현하고, 그 세계 속 방으로 들어가는 문을 오려 꾸미며 완성했습니다. 
         방 안의 모습은 아이들이 생성형 AI 프롬프트를 작성해 이미지를 제작하도록 하여, 상상을 한 층 확장할 수 있도록 했습니다. 
-        마지막으로 각자의 세계를 소개하며 세로로 쌓인 '세계관 아파트'를 완성했습니다. 이렇게 모인 방과 풍경들은 하나의 마을이 디었고, 아이들은 서로의 세계를 여행하며 '틀려도 괜찮고, 나만의 방식이 멋지다'는 마음을 자연스럽게 느낄 수 있었습니다.`,
+        마지막으로 각자의 세계를 소개하며 세로로 쌓인 '세계관 아파트'를 완성했습니다. 이렇게 모인 방과 풍경들은 하나의 마을이 되었고, 아이들은 서로의 세계를 여행하며 '틀려도 괜찮고, 나만의 방식이 멋지다'는 마음을 자연스럽게 느낄 수 있었습니다.`,
         moti_story_text5: `의식적으로 정해진 답을 찾는 것에 익숙해진 아이들이 관념에서 벗어나 더 자유롭고 주체적인 창의경험을 할 수 있길 바라며 워크숍 <무의식에 이름 붙이기>를 설계했습니다. 
-        대표적인 추상회화 작가들의 '무제' 작품들을 함께 함상하는 것으로 시작하여 추상화의 상징적인 요소(점, 선, 면, 색채 그리고 몸짓과 우연성)를 바탕으로 고안한 과정을 제시하고 
-        그에 따라 직접 추성을 그려보는 형태로 진행됐습니다. 아이들은 과정의 단계 중간마다 그림에 대한 각자의 감상을 나누었고, 무의식적으로 완성되는 그림에 각자만의 의미를 
+        대표적인 추상회화 작가들의 '무제' 작품들을 함께 감상하는 것으로 시작하여 추상화의 상징적인 요소(점, 선, 면, 색채 그리고 몸짓과 우연성)를 바탕으로 고안한 과정을 제시하고 
+        그에 따라 직접 추상화를 그려보는 형태로 진행됐습니다. 아이들은 과정의 단계 중간마다 그림에 대한 각자의 감상을 나누었고, 무의식적으로 완성되는 그림에 각자만의 의미를 
         부여해보는 경험을 제시했습니다.`,
         //2-3. Popup_Members(About People)
         member_popup_close_btn: "다른 사람 만나기",
@@ -111,7 +111,7 @@ const translations = {
         peoplephoto_subtext2: `자연을 온전히 느끼고, 각자의 방식으로 빚어낸 소중한 하루하루를 만나보세요.`,
         //3-1. Expirences
         exp_title1: `자연 색상`,
-        exp_about1: `자연은 색과 빛으로 가득 차 있습니다. 밤하늘을 수놓는 별빛, 가을 들녘의 황금빛, 폭설로 덮인 산새, 싱그러운 여름바다처럼요. 
+        exp_about1: `자연은 색과 빛으로 가득 차 있습니다. 밤하늘을 수놓는 별빛, 가을 들녘의 황금빛, 폭설로 덮인 산세, 싱그러운 여름바다처럼요. 
         각자가 떠올리는 자연의 풍경을 바탕으로, 자신만의 자연 팔레트를 구성해봅니다.`,
         exp_title2: `자연 문양`,
         exp_about2: `자연 속에는 반복되는 움직임, 일정한 방향성, 고유한 형태들이 숨어 있습니다. 
@@ -173,7 +173,7 @@ const translations = {
                 자신이 꾸려가는 문명에 물과 불을 활용해 도움이 되면 좋겠다.`,
             },
             letter4:{
-                letter_name: "- 조윤제 and 나루, 데미안",
+                letter_name: "조윤제 and 나루, 데미안",
                 letter_title: "윤서에게",
                 letter_detail: `나는 너를 위해 다양한 의미가 담긴 캠프파이어를 준비했어. 나는 이 선물을 만들기 위해 3달이라는 시간을 썼어. 
                 나는 너가 어디서 왔는지 잘 모르지만 우리 행성에서 가장 흔하면서, 가장 중요한 요소들이 담긴 선물을 준비했어. 이 캠프파이어에는 지구인들이 자주 사용하는 물과 불이 담겨있어. 
@@ -182,7 +182,7 @@ const translations = {
             art5: {
                 art_name: "승준",
                 art_title: "상자 안에 지구",
-                art_detail: `나무에 만들어진 상자 안에 탁구공을 이용한 지구가 잇다. 이걸로 지구가 어떻게 생겼는지 알면 좋겠다.`,
+                art_detail: `나무에 만들어진 상자 안에 탁구공을 이용한 지구가 있다. 이걸로 지구가 어떻게 생겼는지 알면 좋겠다.`,
             },
             letter5:{
                 letter_name: "from : 백승준",
@@ -227,7 +227,7 @@ const translations = {
         about_exhibit_1:
         `From a faraway world, an alien drifts through a mysterious wormhole and lands here on Earth - right at Future Lab.`,
         about_exhibit_2:
-        `We, the Tinkerverse, wish to welcome this unexpencted visitor with with a handmade gift, 
+        `We, the Tinkerverse, wish to welcome this unexpected visitor with a handmade gift, 
         carrying a fragment of nature from our planet.`,
         about_exhibit_3:
         `This program unfolds within an imagined universe where young teens become Earth's guides, showing an alien visitor its feelings and ways to life.`,
@@ -245,11 +245,11 @@ const translations = {
         toExhibit_button: `View Exhibition`,
         //2-2. Moti Story
         moti_story_title: `Story of Moti, Future Lab's Facilitator`,
-        moti_story_text1: `Moti supprots youth creators not through teaching, but through motivation. 
+        moti_story_text1: `Moti supports youth creators not through teaching, but through motivation. 
         We stay closely by their side, helping them imagine and create in their own unique ways. 
         By seeing the world from their perspective, we open up space for them to ask questions and make decisions on their own.`,
         moti_story_text2: `We design workshops and guide conversations with care, thinking about the senses and experiences they need right now. 
-        In this safe and open space, they gradually begin to create in thei own way.`,
+        In this safe and open space, they gradually begin to create in their own way.`,
         moti_name1: `✴︎ With Naru, <Imagining My Own World>`,
         moti_name2: `✴︎ With Demian, <Naming the Unconscious>`,
         moti_story_text3: `It is a workshop that designed to let youth creators imagine without limits. 
@@ -301,7 +301,7 @@ const translations = {
             member6: {
                 member_name: "Yoonha",
                 member_role: "Youth Creator",
-                member_keyword: "#blue #puppy #science #INTJ #moives #swimming #board_games #doing_nothing #Kpop #once_I_start_I_finish #familiar_things",
+                member_keyword: "#blue #puppy #science #INTJ #movies #swimming #board_games #doing_nothing #Kpop #once_I_start_I_finish #familiar_things",
             },
             member7: {
                 member_name: "Seok Kyung",
@@ -362,14 +362,13 @@ const translations = {
                 art_name: "SaeHyun",
                 art_title: "VCT&GEN.G Classic",
                 art_detail: `This gift lets aliens feel the beauty of Earth's minerals. 
-                It is also a weapon to protect them from being kindapped by certain groups.`,
+                It is also a weapon to protect them from being kidnapped by certain groups.`,
             },
             letter2:{
                 letter_name: "SaeHyun",
-                letter_title: "To.우르르꽝꽝",
-                letter_detail: `안녕? 나는 지구인 이채은이야. 네가 눈이 좀 많이 커서 자연을 우주에서도 바다를 보라고 바다 모형을 4개나 만들었어. 
-                3개월 동안 힘들게 만들었으니까 꼭 봐야 해. 깨뜨리면 안돼! 아무리 네 이름이 우르르꽝꽝이지만 소중하게 다뤄줘. 우리 친하게 지내자! 
-                지구에 오면 지구인에게 안들키게 조심해! 그럼 안녕! 지구인 이채은.`,
+                letter_title: "To Ppitturu Ppatturu 2nd",
+                letter_detail: `Hello, I'm SaeHyun. This gift came from my passion for GenG. 
+                I sent you a gun so you don't get kidnapped on Earth. Not related to Earth? No way. I hope you'll mine copper and lead to make your own bullets.`,
             },
             art3: {
                 art_name: "YooSun",

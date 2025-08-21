@@ -37,7 +37,7 @@ const translations = {
         이러한 일련의 과정들은 몸이 기억하고 생각의 파도가 되어 다른 세상의 창을 열게 합니다.
         이를 통해 우리는 세상에 존재하는 것과 부재하는 것 사이의 관계를 공감각적으로 완성해 나갈 수 있습니다.`,
         about_exhibit_5:
-        `3개월간의 신체적, 정신적 탐구를 통해 우리는 단순한 놀이가 아닌, 깊이 있는 경험을 바탕으로한 질문과 발문이 가능하도록 집중했습니다. 
+        `3개월간의 신체적, 정신적 탐구를 통해 우리는 단순한 놀이가 아닌, 깊이 있는 경험을 바탕으로 한 질문과 발문이 가능하도록 집중했습니다. 
         이러한 경험은 우리에게 더욱 개방된 사고와 지속적인 연구의 중요성을 깨닫게 해줍니다.`,
         about_exhibit_6:
         `관람객들도 이번 전시를 통해 일상에서 접하는 익숙한 소재와 콘텐츠를 통해 통찰력과 감상력을 얻기를 기대합니다. 
@@ -545,7 +545,7 @@ const translations = {
             space1: {
                 space_name: "Main Hall",
                 space_detail: `The main activity space of TinkerVERSE.
-                It is a flexible spaace that can be arranged freely depending on the activity,
+                It is a flexible space that can be arranged freely depending on the activity,
                 and most of the work takes place here.`,
             },
             space2: {
@@ -734,7 +734,7 @@ const translations = {
                 price: "₩10,900",
                 size: "Diameter of 42cm",
                 material: "Wood",
-                detail: `The product for convenience in movement trajector.`
+                detail: `The product for convenience in movement trajectory.`
             },
             prod5: {
                 name: "서율",
@@ -773,7 +773,7 @@ const translations = {
                 name: "채은",
                 title: "Woori's room",
                 price: "₩100,000",
-                size: "55(W)x30(L)x50(H)(cm)m",
+                size: "55(W)x30(L)x50(H)(cm)",
                 material: "Wood, Mesh fabric, Acrylic, Permanent marker",
                 detail: `A space for a cat's rest.`
             },
