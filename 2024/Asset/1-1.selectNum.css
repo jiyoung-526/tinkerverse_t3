@@ -78,7 +78,7 @@ body {
 
     .container {
         width: 100%;
-        padding-top: 6rem;
+        padding-top: 4.5rem;
     }
 
     .logo {
@@ -88,6 +88,10 @@ body {
     .textbox {
         margin-bottom: 3.5rem;
         font-size: 0.95rem;
+    }
+
+    .circle-buttons {
+        margin-bottom: 3rem;
     }
 
     .circle-button {
