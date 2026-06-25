@@ -14,8 +14,8 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 .logo {
@@ -34,7 +34,7 @@ body {
     font-size: 1rem;
     color: black;
     display: inline-block;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 .circle-buttons {
