@@ -51,7 +51,7 @@ body {
 
     background-color: #E6E6E6;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
 
     text-decoration: none;
     color: black;
@@ -78,7 +78,7 @@ body {
 
     .container {
         width: 100%;
-        padding-top: 2rem;
+        padding-top: 4rem;
     }
 
     .logo {
@@ -86,7 +86,7 @@ body {
     }
 
     .textbox {
-        margin-bottom: 1.5rem;
+        margin-bottom: 3.5rem;
         font-size: 0.95rem;
     }
 
